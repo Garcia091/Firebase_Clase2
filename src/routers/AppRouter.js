@@ -4,7 +4,6 @@ import { firebase } from '../firebase/firebase-config'
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
     Redirect
 } from 'react-router-dom';
 
@@ -15,6 +14,7 @@ import { JournalScreen } from '../components/journal/JournalScreen';
 import { PrivateRoute } from './PrivateRoute'
 import { PublicRoute } from './PublicRoute'
 import { startLoadingNote } from '../actions/notesAction';
+import { Task } from '../components/task/Task';
 
 
 export const AppRouter = () => {
@@ -24,7 +24,7 @@ export const AppRouter = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        firebase.auth().onAuthStateChanged(async(user) => {
+        firebase.auth().onAuthStateChanged(async (user) => {
             console.log(user)
             if (user?.uid) {
                 dispatch(login(user.uid, user.displayName))
@@ -57,6 +57,13 @@ export const AppRouter = () => {
                         exact
                         path="/"
                         component={JournalScreen}
+                        isAuthenticated={isLoogedIn}
+                    />
+
+                    <PrivateRoute
+                        exact
+                        path="/task"
+                        component={Task}
                         isAuthenticated={isLoogedIn}
                     />
 

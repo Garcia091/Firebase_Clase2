@@ -1,16 +1,5 @@
 import { types } from "../types/types";
 
-// const initialState = {
-//     notes: [],
-//     active: {
-//         id: '',
-//         title: '',
-//         body: '',
-//         imgUrl: '',
-//         date: ''
-//     },
-// }
-
 const initialState = {
     notes: [],
     active: null,
@@ -25,6 +14,7 @@ export const notesReducer = (state = initialState, action) => {
                     ...action.payload
                 }
             }
+
         case types.notesLoad:
             console.log(action.payload)
             return {
@@ -43,6 +33,25 @@ export const notesReducer = (state = initialState, action) => {
                 )
             }
 
+        case types.notesDelete:
+            return {
+                ...state,
+                active: null,
+                notes: state.notes.filter(notes => notes.id !== action.payload)
+            }
+
+        case types.notesAddNew:
+            return {
+                ...state,
+                notes: [action.payload, ...state.notes]
+            }
+
+            case types.notesLogoutClean:
+                return {
+                    ...state,
+                    active: null,
+                    notes:[]
+                }
         default:
             return state;
     }

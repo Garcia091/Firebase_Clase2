@@ -1,5 +1,5 @@
 import React from 'react'
-import { startSaveNote, startUploading } from '../../actions/notesAction'
+import { startSaveNote, startUploading, startDeleting } from '../../actions/notesAction'
 import { useDispatch, useSelector } from 'react-redux'
 
 export const NotesAppBar = () => {
@@ -8,6 +8,7 @@ export const NotesAppBar = () => {
 
     const handleSave = () => {
         dispatch(startSaveNote(active))
+        
     }
 
     const handlePictureClick = () => {
@@ -16,12 +17,15 @@ export const NotesAppBar = () => {
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
-        console.log(file)
-        if ( file ) {
-            dispatch( startUploading( file ) );
+        console.log('url cargado', file)
+        if (file) {
+            dispatch(startUploading(file));
         }
     }
 
+    const handleDelete = () => {
+        dispatch(startDeleting(active.id))
+    }
 
     return (
         <div className="notes__appbar">
@@ -38,7 +42,7 @@ export const NotesAppBar = () => {
                     className="btn"
                     onClick={handlePictureClick}
                 >
-                     Picture
+                    Picture
                 </button>
 
                 <button className="btn"
@@ -46,6 +50,13 @@ export const NotesAppBar = () => {
                 >
                     Save
                 </button>
+
+                <button type="button"
+                    className="btn btn-danger"
+                    onClick={handleDelete}
+                >
+                    Eliminar
+                    </button>
             </div>
         </div>
     )

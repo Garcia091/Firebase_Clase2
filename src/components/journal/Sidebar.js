@@ -9,10 +9,16 @@ export const Sidebar = () => {
     const dispatch = useDispatch()
 
     const { name } = useSelector(state => state.auth);
+    const { notes } = useSelector(state => state.notes);
 
     const handleLogout = () => {
         console.log('Click')
         dispatch(startLogout())
+    }
+
+    const handleNew = () => {
+        dispatch(notesAction(notes))
+        console.log('Click', notes)
     }
 
     return (
@@ -30,9 +36,9 @@ export const Sidebar = () => {
                 </button>
             </div>
 
-            <div className="journal__new-entry">
+            <div className="journal__new-entry" onClick ={handleNew}>
                 <i className="far fa-calendar-plus fa-5x"></i>
-                <p className="mt-5" onClick ={()=> dispatch(notesAction())}>
+                <p className="mt-5" >
                     New entry
                 </p>
             </div>

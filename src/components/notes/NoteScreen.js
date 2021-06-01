@@ -11,7 +11,7 @@ export const NoteScreen = () => {
     const dispatch = useDispatch();
 
     const [values, handleInputChange, reset] = useForm(notes);
-    const { body, title, id } = values;
+    const { body, title } = values;
 
     const activeId = useRef(notes.id)
 
@@ -23,8 +23,8 @@ export const NoteScreen = () => {
     }, [notes, reset])
 
     useEffect(() => {
-        dispatch(activeNote(values.id,{...values}))
-    }, [values,dispatch])
+        dispatch(activeNote(values.id, { ...values }))
+    }, [values, dispatch])
 
     return (
         <div className="notes__main-content">
@@ -57,7 +57,7 @@ export const NoteScreen = () => {
                     (
                         <div className="notes__image">
                             <img
-                                src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
+                                src={notes.url}
                                 alt="imagen"
                             />
                         </div>
@@ -65,10 +65,8 @@ export const NoteScreen = () => {
                 }
 
 
-
-
             </div>
-
         </div>
+        
     )
 }
