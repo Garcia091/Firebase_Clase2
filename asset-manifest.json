@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Firebase_Clase2/static/css/main.5eafae57.chunk.css",
-    "main.js": "/Firebase_Clase2/static/js/main.af476a42.chunk.js",
-    "main.js.map": "/Firebase_Clase2/static/js/main.af476a42.chunk.js.map",
+    "main.js": "/Firebase_Clase2/static/js/main.ce6cdc74.chunk.js",
+    "main.js.map": "/Firebase_Clase2/static/js/main.ce6cdc74.chunk.js.map",
     "runtime-main.js": "/Firebase_Clase2/static/js/runtime-main.75a6ca47.js",
     "runtime-main.js.map": "/Firebase_Clase2/static/js/runtime-main.75a6ca47.js.map",
-    "static/js/2.c007cc3e.chunk.js": "/Firebase_Clase2/static/js/2.c007cc3e.chunk.js",
-    "static/js/2.c007cc3e.chunk.js.map": "/Firebase_Clase2/static/js/2.c007cc3e.chunk.js.map",
+    "static/js/2.b59fb6b5.chunk.js": "/Firebase_Clase2/static/js/2.b59fb6b5.chunk.js",
+    "static/js/2.b59fb6b5.chunk.js.map": "/Firebase_Clase2/static/js/2.b59fb6b5.chunk.js.map",
     "index.html": "/Firebase_Clase2/index.html",
-    "precache-manifest.6dbcaf8b5e48f93a1086029d3e3f9b32.js": "/Firebase_Clase2/precache-manifest.6dbcaf8b5e48f93a1086029d3e3f9b32.js",
+    "precache-manifest.784cefcb6cefcb840ddddd592e225e44.js": "/Firebase_Clase2/precache-manifest.784cefcb6cefcb840ddddd592e225e44.js",
     "service-worker.js": "/Firebase_Clase2/service-worker.js",
     "static/css/main.5eafae57.chunk.css.map": "/Firebase_Clase2/static/css/main.5eafae57.chunk.css.map",
-    "static/js/2.c007cc3e.chunk.js.LICENSE.txt": "/Firebase_Clase2/static/js/2.c007cc3e.chunk.js.LICENSE.txt"
+    "static/js/2.b59fb6b5.chunk.js.LICENSE.txt": "/Firebase_Clase2/static/js/2.b59fb6b5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.75a6ca47.js",
-    "static/js/2.c007cc3e.chunk.js",
+    "static/js/2.b59fb6b5.chunk.js",
     "static/css/main.5eafae57.chunk.css",
-    "static/js/main.af476a42.chunk.js"
+    "static/js/main.ce6cdc74.chunk.js"
   ]
 }
